@@ -39,7 +39,7 @@ public class ArithmeticProgressionSum {
     public static long sumByLoop(int n, int N) {
         long sum = 0;
         for (int i = 1; i <= N; i++) {
-            sum += i * n;
+            sum += (long) i * n;
         }
         return sum;
     }
@@ -81,7 +81,7 @@ public class ArithmeticProgressionSum {
         public void run() {
             long partialSum = 0;
             for (int j = start; j <= end; j++) {
-                partialSum += j * n;
+                partialSum += (long) j * n;
             }
             synchronized (sum) {
                 sum[0] += partialSum;
